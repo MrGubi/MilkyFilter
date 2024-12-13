@@ -289,7 +289,7 @@ Show
 
 #Str Dex ----------------------------------------------------------------------------------------------------------------------------------------------------
 Show
-    BaseType "Expert Shielded Helm" "Expert Scale Mail" "Expert Rogue Armour" "Expert Cloaked Mail" "Slayer Armour" "Tournament Mail" "Heroic Armour" "Expert Stacked Sabatons" "Expert Doubled Gauntlets" "Expert Bombard Crossbow" "Expert Forlorn Crossbow"
+    BaseType "Expert Shielded Helm" "Expert Scale Mail" "Expert Rogue Armour" "Expert Cloaked Mail" "Slayer Armour" "Tournament Mail" "Heroic Armour" "Expert Stacked Sabatons" "Expert Doubled Gauntlets" "Expert Bombard Crossbow" "Expert Forlorn Crossbow" "Expert Dyad Crossbow" "Expert Soldier Greathelm"
     SetFontSize 35
     SetTextColor 255 255 255
     SetBorderColor 0 102 0
@@ -329,7 +329,7 @@ Show
 
 #Neutral ----------------------------------------------------------------------------------------------------------------------------------------------------
 Show
-    BaseType "Golden Bracers" "Golden Caligae" "Golden Mantle" "Golden Wreath" "Golden Visage"
+    BaseType "Golden Bracers" "Golden Caligae" "Golden Mantle" "Golden Wreath" "Golden Visage" "Guarded Helm"
     SetFontSize 35
     SetTextColor 255 255 255
     SetBorderColor 0 102 0
@@ -338,11 +338,21 @@ Show
 
 
 Show
-Class "Rings" "Amulets" "Belts"
+Class "Rings" "Amulets" "Belts" 
 Rarity Rare
 SetFontSize 40
 SetTextColor 233 206 75
 SetBorderColor 233 206 75
+PlayEffect Yellow
+MinimapIcon 1 Yellow Diamond
+
+Show 
+Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre" "Foci"
+Rarity Rare
+SetFontSize 40
+SetTextColor 255 255 255
+SetBorderColor 0 255 255
+SetBackgroundColor 0 0 0
 PlayEffect Yellow
 MinimapIcon 1 Yellow Diamond
 
