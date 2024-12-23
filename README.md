@@ -1,2 +1,2 @@
-- ChatFilter recomended for most
+- ChatFilter recommended for most
 - Use Molk filter only when running t15 maps
