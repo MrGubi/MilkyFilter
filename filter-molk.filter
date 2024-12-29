@@ -16,16 +16,6 @@
 # Overrides - Uniques, Valuables
 #--------------------------
 
-Show
-Rarity Unique
-SetTextColor 175 96 37 255
-SetBorderColor 175 96 37 255
-SetBackgroundColor 53 13 13 255
-PlayAlertSound 3 300
-PlayEffect Brown
-MinimapIcon 2 Brown Star
-SetFontSize 40
-
 ## Divine Orb Style
 Show
 Class "Currency"
@@ -42,7 +32,7 @@ MinimapIcon 0 Red Star
 # Gold
 #--------------------------
 
-Show
+Hide
 StackSize >= 500
 BaseType == "Gold"
 SetTextColor 255 255 255
@@ -59,22 +49,6 @@ SetBackgroundColor 0 0 0 180
 # Uncut Gems
 #--------------------------
 
-Hide
-BaseType "Uncut Skill Gem"
-ItemLevel < 19
-
-Hide
-BaseType "Uncut Spirit Gem"
-ItemLevel < 19
-
-Show
-BaseType "Uncut "
-SetTextColor 20 240 240
-SetBorderColor 20 240 240
-PlayAlertSound 2 300
-PlayEffect Cyan
-MinimapIcon 1 Cyan Triangle
-
 Show
 BaseType "Uncut "
 ItemLevel > 19
@@ -85,7 +59,117 @@ PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 
+Hide
+BaseType "Uncut Skill Gem"
+ItemLevel < 19
 
+Hide
+BaseType "Uncut Spirit Gem"
+ItemLevel < 19
+
+Hide 
+BaseType "Uncut Support Gem"
+
+Show
+BaseType "Uncut "
+SetTextColor 20 240 240
+SetBorderColor 20 240 240
+PlayAlertSound 2 300
+PlayEffect Cyan
+MinimapIcon 1 Cyan Triangle
+
+Show
+Rarity Unique
+Class "Jewel" "Relic" "Flask" "Ring"
+
+Hide
+Rarity <= Rare
+Identified True
+
+#THIS IS  THE RULE FOR BASES I WANT TO CRAFT. REPLACE SHOW WITH HIDE IF YOU DON'T WANT THEM.
+#----------------------------------------------------------------------------------------------
+
+Show
+BaseType "Expert Crescent Quarterstaff" "Expert Gothic Quarterstaff" "Expert Slicing Quarterstaff" "Expert Dualstring Bow"
+Rarity = Normal
+SetTextColor 255 255 255 
+SetBorderColor 255 255 255
+SetBackgroundColor 124 138 98
+
+#THIS IS THE RULE FOR RARE ITEMS IM WILLING TO IDENTIFY SIMPLY ADD THE BASES YOU WANT TO SEE TO THE RULES BELOW
+#--------------------------------------------------------------------------------------------------------------
+
+Show
+BaseType "Expert Gothic Quarterstaff" "Expert Forlorn Crossbow" "Expert Crescent Quarterstaff" "Expert Crackling Quarterstaff" "Expert Slicing Quarterstaff" "Expert Dualstring Bow" "Expert Shortbow" "Expert Composite Bow" "Expert Zealot Bow" 
+ItemLevel >= 81
+Rarity Rare
+SetFontSize 40
+SetTextColor 255 255 255
+SetBorderColor 255 255 255
+SetBackgroundColor 0 0 0
+
+Show
+BaseType "Expert Gothic Quarterstaff" "Expert Forlorn Crossbow" "Expert Crescent Quarterstaff" "Expert Crackling Quarterstaff" "Expert Slicing Quarterstaff" "Expert Dualstring Bow" "Expert Shortbow" "Expert Composite Bow" "Expert Zealot Bow" 
+ItemLevel >= 79
+Rarity Rare
+SetFontSize 40
+SetTextColor 230 242 53
+SetBorderColor 255 255 255
+SetBackgroundColor 0 0 0
+
+Show
+BaseType "Visceral Quiver" "Primed Quiver"	
+ItemLevel >= 79
+Rarity Rare
+SetFontSize 40
+SetTextColor 230 242 53
+SetBorderColor 52 235 52
+SetBackgroundColor 0 0 0
+
+Show
+BaseType "Expert Feathered Tiara" "Expert Chain Tiara" "Expert Studded Vest" "Expert Hexer's Robe" "Expert Keth Raiment" "Expert Scalper's Jacket" "Expert Wayfarer Jacket" "Expert Waxed Jacket" "Expert Feathered Sandals" "Expert Hunting Shoes" "Expert Threaded Shoes" "Expert Lizardscale Boots" 
+ItemLevel >= 79
+Rarity Rare
+SetFontSize 40
+SetTextColor 230 242 53
+SetBorderColor 52 235 52
+SetBackgroundColor 0 0 0
+
+
+Show 
+Class "Wand"
+ItemLevel >= 81 
+Rarity Rare
+SetFontSize 40
+SetTextColor 230 242 53
+SetBorderColor 255 255 255
+SetBackgroundColor 0 0 0
+
+Show
+Rarity Unique
+BaseType "Spiked Club" "Torment Club" "Long Quarterstaff" "Wyrm Quarterstaff" "Attuned Wand" "Crude Bow" "Shortbow" "Dualstring Bow" "Steel Plate" "Champion Cuirass" "Silk Robe" "Altar Robe" "Explorer Armour" "Knight Armour" "Wrapped Greathelm" "Chain Tiara" "Gold Circlet" "Closed Helm" "Tribal Mask" "Moulded Mitts" "Fine Bracers" "Solid Mask" "Intricate Gloves" "Layered Gauntlets" "Rope Cuffs" "Hunting Shoes" "Stone Tower Shield" "Crucible Tower Shield" "Grand Manchettes" "Grand Cuisses" "Grand Visage" "Garment" "Visceral Quiver" "Azure Amulet" "Jade Amulet" "Gold Amulet" "Rawhide Belt" "Omen Crest Shield"
+SetTextColor 175 96 37 255
+SetBorderColor 175 96 37 255
+SetBackgroundColor 53 13 13 255
+PlayAlertSound 3 300
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+SetFontSize 40
+
+
+Show 
+Rarity Unique 
+BaseType "Smuggler Coat" "Conqueror Plate" "Furtive Wraps" "Grand Regalia" "Stellar Amulet" "Heavy Belt" "Ornate Belt" "Utility Belt"
+SetTextColor 175 96 37 255
+SetBorderColor 175 96 37 255
+SetBackgroundColor 255 255 255
+PlayAlertSound 6 300
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+SetFontSize 40
+
+Hide
+Rarity Unique
 
 #--------------------------
 # Socketables and Special Character Equipment
@@ -130,9 +214,14 @@ PlayEffect Cyan Temp
 
 # Special B Tier - Any Runes and Charms
 Show 
-BaseType " Rune" " Charm"
+BaseType "Iron Rune" "Golden Charm"
 SetTextColor 0 240 190
+SetFontSize 40
 PlayEffect Cyan Temp
+
+
+Hide
+BaseType " Rune" " Charm"
 
 #--------------------------
 # Socketables and Special Character Equipment
@@ -153,10 +242,10 @@ SetFontSize 40
 # Currency Tier B: Vaal, Chaos, Exalt, Exotic
 Show
 Class "Currency"
-BaseType "Vaal Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Exotic" "Exalted Orb" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy" 
-SetTextColor 255 207 132
-SetBorderColor 255 207 132
-SetBackgroundColor 76 51 12
+BaseType "Vaal Orb" "Chaos Orb" "Exotic" "Exalted Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy" 
+SetTextColor 255 255 255
+SetBorderColor 140 8 140
+SetBackgroundColor 189 42 191
 PlayAlertSound 2 300
 PlayEffect White
 MinimapIcon 1 White Circle
@@ -176,7 +265,7 @@ MinimapIcon 1 White Circle
 # Currency Tier C: Vaal, Chaos, Exalt, Exotic
 Show
 Class "Currency"
-BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Chance Shard"
+BaseType "Armourer's Scrap" "Blacksmith's Whetstone" "Chance Shard"
 SetFontSize 35
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
@@ -184,7 +273,7 @@ MinimapIcon 2 Grey Circle
 
 Hide
 Class "Currency"
-BaseType "Wisdom" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard"
+BaseType "Wisdom" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Regal Orb" "Arcanist's Etcher"  "Lesser Jeweller's Orb"
 
 Show
 Class "Currency"
@@ -195,6 +284,13 @@ SetBackgroundColor 0 0 0
 MinimapIcon 2 Grey Circle
 SetFontSize 40
 
+Show
+Class "Expedition Logbook"
+SetFontSize 40
+SetTextColor 255 10 10
+SetBorderColor 255 10 10
+SetBackgroundColor 0 0 0
+
 # Unknown currency
 Show
 Class "Currency"
@@ -204,6 +300,9 @@ SetBackgroundColor 76 51 12
 PlayAlertSound 2 300
 PlayEffect Pink
 MinimapIcon 1 White Circle
+
+Hide
+BaseType "Barya" "Ultimatum" 
 
 # Fragments
 Show
@@ -232,144 +331,6 @@ Hide
 BaseType "Waystone"
 WaystoneTier < 14
 
-#--------------------------
-# Value Bases
-#--------------------------
-
-#Str ----------------------------------------------------------------------------------------------------------------------------------------------------
-Show
-    BaseType "Expert Elite Greathelm" "Expert Vaal Cuirass" "Expert Steel Plate" "Abyssal Cuirass" "Expert Stone Greaves" "Expert Moulded Mitts" "Expert Crumbling Maul" "Expert Leaden Greathammer" "Expert Brigand Mace"
-    Rarity Rare
-    SetFontSize 30
-    SetTextColor 255 255 0
-    SetBorderColor 204 0 0
-    SetBackgroundColor 0 0 0
-
-#Str Dex ----------------------------------------------------------------------------------------------------------------------------------------------------
-Show
-    BaseType "Expert Shielded Helm" "Expert Scale Mail" "Expert Rogue Armour" "Expert Cloaked Mail" "Slayer Armour" "Tournament Mail" "Heroic Armour" "Expert Stacked Sabatons" "Expert Doubled Gauntlets" "Expert Bombard Crossbow" "Expert Forlorn Crossbow"
-    Rarity Rare
-    SetFontSize 35
-    SetTextColor 255 255 0
-    SetBorderColor 0 102 0
-    SetBackgroundColor 0 0 0
-
-#Str Int ----------------------------------------------------------------------------------------------------------------------------------------------------
-Show
-    BaseType "Expert Heavy Crown" "Expert Sacrificial Mantle" "Expert Shaman Mantle" "Expert Pelt Leggings" "Zenith Vestments" "Corvus Mantle" "Revered Vestments" "Expert Goldcast Cuffs"
-    Rarity Rare
-    SetFontSize 35
-    SetTextColor 255 255 0
-    SetBorderColor 0 0 179
-    SetBackgroundColor 0 0 0
-
-#Dex ----------------------------------------------------------------------------------------------------------------------------------------------------
-Show
-    BaseType "Expert Hunter Hood" "Expert Serpentscale Coat" "Armoured Vest" "Expert Lizardscale Boots" "Expert Spined Bracers" "Expert Zealot Bow" "Expert Dualstring Bow" "Expert Warden Bow"
-    Rarity Rare
-    SetFontSize 35
-    SetTextColor 255 255 0
-    SetBorderColor 0 102 0
-    SetBackgroundColor 0 0 0
-
-#Dex Int ----------------------------------------------------------------------------------------------------------------------------------------------------
-Show
-    BaseType "Expert Tribal Mask" "Expert Scalper's Jacket" "Expert Wayfarer Jacket" "Assassin Garb" "Devout Garb" "Expert Hunting Shoes" "Expert Spiral Wraps" "Expert Crescent Quarterstaff" "Expert Gothic Quarterstaff"
-    Rarity Rare
-    SetFontSize 35
-    SetTextColor 255 255 0
-    SetBorderColor 0 0 179
-    SetBackgroundColor 0 0 0
-
-#Int ----------------------------------------------------------------------------------------------------------------------------------------------------
-Show
-    BaseType "Expert Feathered Tiara" "Expert Altar Robe" "Expert Keth Raiment" "Enlightened Robe" "Arcane Robe" "Expert Feathered Sandals" "Expert Intricate Gloves" "Chiming Staff" "Galvanic Wand"
-    Rarity Rare
-    SetFontSize 35
-    SetTextColor 255 255 0
-    SetBorderColor 0 0 179
-    SetBackgroundColor 0 0 0
-
-#Neutral ----------------------------------------------------------------------------------------------------------------------------------------------------
-Show
-    BaseType "Golden Bracers" "Golden Caligae" "Golden Mantle" "Golden Wreath" "Golden Visage"
-    Rarity Rare
-    SetFontSize 35
-    SetTextColor 255 255 0
-    SetBorderColor 0 102 0
-    SetBackgroundColor 0 0 0
-
-#--------------------------
-# Value Bases
-#--------------------------
-
-#Str ----------------------------------------------------------------------------------------------------------------------------------------------------
-#Show
-    BaseType "Expert Elite Greathelm" "Expert Vaal Cuirass" "Expert Steel Plate" "Abyssal Cuirass" "Expert Stone Greaves" "Expert Moulded Mitts" "Expert Crumbling Maul" "Expert Leaden Greathammer" "Expert Brigand Mace"
-    SetFontSize 30
-    SetTextColor 255 255 255
-    SetBorderColor 204 0 0
-    SetBackgroundColor 0 0 0
-
-#Str Dex ----------------------------------------------------------------------------------------------------------------------------------------------------
-#Show
-    BaseType "Expert Shielded Helm" "Expert Scale Mail" "Expert Rogue Armour" "Expert Cloaked Mail" "Slayer Armour" "Tournament Mail" "Heroic Armour" "Expert Stacked Sabatons" "Expert Doubled Gauntlets" "Expert Bombard Crossbow" "Expert Forlorn Crossbow"
-    SetFontSize 35
-    SetTextColor 255 255 255
-    SetBorderColor 0 102 0
-    SetBackgroundColor 0 0 0
-
-#Str Int ----------------------------------------------------------------------------------------------------------------------------------------------------
-#Show
-    BaseType "Expert Heavy Crown" "Expert Sacrificial Mantle" "Expert Shaman Mantle" "Expert Pelt Leggings" "Zenith Vestments" "Corvus Mantle" "Revered Vestments" "Expert Goldcast Cuffs"
-    SetFontSize 35
-    SetTextColor 255 255 255
-    SetBorderColor 0 0 179
-    SetBackgroundColor 0 0 0
-
-#Dex ----------------------------------------------------------------------------------------------------------------------------------------------------
-#Show
-    BaseType "Expert Hunter Hood" "Expert Serpentscale Coat" "Armoured Vest" "Expert Lizardscale Boots" "Expert Spined Bracers" "Expert Zealot Bow" "Expert Dualstring Bow" "Expert Warden Bow"
-    SetFontSize 35
-    SetTextColor 255 255 255
-    SetBorderColor 0 102 0
-    SetBackgroundColor 0 0 0
-
-#Dex Int ----------------------------------------------------------------------------------------------------------------------------------------------------
-Show
-    BaseType "Expert Crescent Quarterstaff" "Expert Gothic Quarterstaff" "Expert Dualstring Bow"
-    SetFontSize 35
-    SetTextColor 255 255 255
-    SetBorderColor 0 0 179
-    SetBackgroundColor 0 0 0
-
-#Int ----------------------------------------------------------------------------------------------------------------------------------------------------
-#Show
-    BaseType "Expert Feathered Tiara" "Expert Altar Robe" "Expert Keth Raiment" "Enlightened Robe" "Arcane Robe" "Expert Feathered Sandals" "Expert Intricate Gloves" "Chiming Staff" "Galvanic Wand"
-    SetFontSize 35
-    SetTextColor 255 255 255
-    SetBorderColor 0 0 179
-    SetBackgroundColor 0 0 0
-
-#Neutral ----------------------------------------------------------------------------------------------------------------------------------------------------
-#Show
-    BaseType "Golden Bracers" "Golden Caligae" "Golden Mantle" "Golden Wreath" "Golden Visage"
-    SetFontSize 35
-    SetTextColor 255 255 255
-    SetBorderColor 0 102 0
-    SetBackgroundColor 0 0 0
-
-Show 
-BaseType "Tier"
-
-Show
-Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre" "Foci"
-ItemLevel > 81
-Rarity Rare
-SetFontSize 40
-SetTextColor 255 255 255
-SetBorderColor 255 255 255
-SetBackgroundColor 0 0 0
 
 Show
 Class "Rings" "Amulets" "Belts"
@@ -385,14 +346,18 @@ MinimapIcon 1 Yellow Diamond
 #--------------------------
 
 Show
+BaseType "Heavy Belt" "Stellar Amulet" "Emerald Ring" "Sapphire Ring" "Gold Ring" "Ornate Belt" "Unset Ring" "Breach Ring"
 Rarity Normal
-Class "Rings" "Amulets" "Belts"
+SetBorderColor 6 69 3
 SetFontSize 40
 
-Show
+Hide
+Rarity Normal
+Class "Rings" "Amulets" "Belts"
+
+Hide
 Class "Rings" "Amulets" "Belts"
 Rarity Magic
-SetFontSize 40
 
 #--------------------------
 # Salvagable Items
